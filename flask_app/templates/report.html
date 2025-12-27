@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Criminal Report</h2>
+
+<!-- Display Matched Image -->
+<img src="{{ url_for('static', filename='images/faces/' + image) }}" width="200">
+
+<!-- Display Criminal Details -->
+<p><strong>Name:</strong> {{ criminal.name }}</p>
+<p><strong>Age:</strong> {{ criminal.age }}</p>
+<p><strong>Date of Birth (DOB):</strong> {{ criminal.dob }}</p>
+<p><strong>First Crime:</strong> {{ criminal.first_crime }}</p>
+<p><strong>First Crime Location:</strong> {{ criminal.first_crime_location }}</p>
+<p><strong>Current Crime:</strong> {{ criminal.current_crime }}</p>
+<p><strong>Current Crime Location:</strong> {{ criminal.current_crime_location }}</p>
+<p><strong>Charges:</strong> {{ criminal.charges }}</p>
+
+<div>
+  <!-- Back to Analyze Button -->
+  <a href="{{ url_for('analyze') }}" class="btn btn-primary">Back to Analyze</a>
+
+  <!-- See Report Button (only if pdf_name is present) -->
+  {% if pdf_name %}
+    <a href="{{ url_for('see_pdf', pdf_name=pdf_name) }}"
+       class="btn btn-secondary"
+       target="_blank">
+       See Report
+    </a>
+  {% endif %}
+</div>
+{% endblock %}

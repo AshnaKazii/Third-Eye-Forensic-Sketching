@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block content %}
+<h2>Upload an Image to Analyze</h2>
+<form
+  action="{{ url_for('analyze') }}"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <input type="file" name="file" required />
+  <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+{% if og_image %}
+<h3>Uploaded Image:</h3>
+<img
+  src="{{ url_for('static', filename='uploads/' + og_image) }}"
+  width="200"
+/>
+{% endif %} {% if matched_images %}
+<h3>Matched Faces:</h3>
+{% for image, distance in matched_images %}
+<div>
+  <!-- Clicking the image redirects to the report page for that specific image -->
+  <a href="{{ url_for('report', filename=image) }}">
+    <img
+      src="{{ url_for('static', filename='images/faces/' + image) }}"
+      width="150"
+      style="cursor: pointer"
+    />
+  </a>
+  <p>Match Found: {{ distance }}</p>
+</div>
+{% endfor %} {% endif %} {% endblock %}

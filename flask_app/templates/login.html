@@ -1,0 +1,44 @@
+<style>
+    /* Topbar styling */
+    .navbar-expand-lg,.bg-light{
+        display: none !important;
+    }
+    
+</style>
+
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Add a custom class for centralized form styling -->
+ <div class="row">
+<div class="col-lg-4"></div>
+
+<div class="col-lg-6">
+    <!-- Topbar Section -->
+    <center>
+    <div class="topbar">
+         <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="200" class="logo">
+    </div>
+
+    <h2 class="mt-5 text-center">Login</h2>
+
+    <!-- Form Section -->
+    <form method="POST" class="login-form">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control centered-input" id="username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control centered-input" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</center>
+</div>
+</div>
+{% endblock %}
+
+{% block styles %}
+
+{% endblock %}

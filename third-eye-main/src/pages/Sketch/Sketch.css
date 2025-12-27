@@ -1,0 +1,131 @@
+        .canvas-container {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #000;
+            position: relative;
+        }
+        .tool-panel img {
+            width: 75px;
+            cursor: pointer;
+            margin: 10px;
+            transition: border 0.3s ease;
+        }
+        .tool-panel{
+            height: 600px;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+        #canvas{
+            /* border: 1px solid #000; */
+                transform-style: preserve-3d;
+                transition: transform 0.5s ease-in-out;
+                border-radius: 12px; /* Rounded corners */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+              
+              
+        }
+        .tool-panel img.selected {
+            border: 3px solid #e41b1b; /* Blue border for selected image */
+        }
+        .canvas-container img.selected {
+            border: 3px solid #e41b1b; /* Blue border for selected image on canvas */
+        }
+        .tool-panel {
+            padding: 10px;
+        }
+        .image-item {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .movement-controls button {
+            margin: 5px;
+        }
+        #final-image {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+        .zind5{
+            z-index: 5;
+        }
+        .zind4{
+            z-index: 4;
+        }
+        #face-parts-tab li{
+         list-style: none;   
+         /* width: 100%; */
+         cursor: pointer;
+         background-color: #eee;
+        }
+        #face-parts-tab li.selected{
+            background-color: #ddd;
+        }
+
+        .tab-content{
+            display: none;
+        }
+        .tab-content.active{display: inline-table}
+
+        li {
+            position: relative;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 4px; /* Rounded corners */
+            border: 1px solid #ddd; /* Light border */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            font-size: 18px;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+          }
+          
+          /* Hover effect for <li> */
+          li:hover {
+            transform: translateY(-5px); /* Lift the <li> on hover */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+            border-color: #e41b1b; /* Change border color on hover */
+            background-color: #f9f9f9; /* Light background change */
+          }
+          
+          /* Focused effect for <li> */
+          li:focus-within {
+            border-color: #e41b1b;
+            outline: none; /* Remove the default focus outline */
+          }
+          
+
+          
+          /* Optional: If using a <ul> container, style it */
+          ul {
+            list-style: none; /* Remove default list bullets */
+            padding: 0;
+            margin: 0;
+          }
+          
+          .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            background-color: #fcce00; /* Button background color */
+            color: white;
+            border: 2px solid transparent;
+            border-radius: 8px; /* Rounded corners */
+            cursor: pointer;
+            outline: none; /* Remove the default focus outline */
+            transition: all 0.3s ease; /* Smooth transition for hover/focus effects */
+          }
+          
+          /* Hover effect */
+          .btn:hover {
+            background-color: #e41b1b; /* Darker blue on hover */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            transform: translateY(-3px); /* Lift the button on hover */
+          }
+          
+          /* Focus effect for accessibility */
+          .btn:focus {
+            border-color: #e41b1b; /* Keep the border color same as background on focus */
+            box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3); /* Outline with soft blue */
+          }
+        

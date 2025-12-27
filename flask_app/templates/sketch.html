@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Upload an Image to Make Sketch</h2>
+<form method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="file" class="form-label">Choose an Image</label>
+        <input type="file" class="form-control" id="file" name="file" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+{% if out_image|length > 0 %}
+<div>
+    <img src="{{ url_for('static', filename='gen_sketch/' + out_image.split('/')[-1]) }}" class="img-thumbnail" alt="Matched Image">
+    <a href="{{ url_for('static', filename='gen_sketch/' + out_image.split('/')[-1]) }}" download>Download</a>
+</div>
+
+
+{% endif %}
+
+
+
+{% endblock %}
