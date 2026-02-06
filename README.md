@@ -18,6 +18,6 @@ TECHNOLOGY STACK:
 
 CONTRIBUTORS:
 
-Ashna Kazi
-Juveriya Khan
+Ashna Kazi,
+Juveriya Khan,
 Fawwaz Shaikh
