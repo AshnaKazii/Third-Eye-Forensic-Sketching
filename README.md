@@ -3,8 +3,6 @@ The purpose of "Third Eye Forensic Sketching – A New Era in Crime Investigatio
 of known criminals for potential matches. If a match is not found, the "Third Eye Forensic Sketching" app will automatically add the newly created sketch to the database, enhancing future search capabilities and continuously improving the system’s ability to assist in identifying criminals. This ensures the database grows over time, becoming more comprehensive and effective for crime investigations.
 
 TECHNOLOGY STACK:
-
-Web Development Frameworks:
 ▪ Backend: Django or Flask (Python); Node.js (JavaScript) as an alternative.
 ▪ Frontend: React or Angular for user interface.
 
@@ -18,4 +16,7 @@ Web Development Frameworks:
 • Programming Languages: Python for AI and backend; JavaScript for front-end and backend
 (Node.js).
 
-• Development Tools: Visual Studio Code,WebStorm for JavaScript.
+CONTRIBUTORS:
+Ashna Kazi
+Juveriya Khan
+Fawwaz Shaikh
